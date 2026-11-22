@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeLink - Help Together</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h2>LifeLink</h2>
+        <p>Connect. Help. Grow Together.</p>
+    </header>
+
+    <main>
+
+        <section class="welcome">
+            <h1>Need Help? We Are Here!</h1>
+            <p>Ask for help or help someone in your community.</p>
+        </section>
+
+        <section class="request-section" id="authSection">
+            <h2>Login / Sign Up</h2>
+
+            <form id="authForm">
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="password" id="password" placeholder="Password (minimum 6 characters)" required>
+                <button type="button" id="signupBtn">Sign Up</button>
+                <button type="button" id="loginBtn">Login</button>
+            </form>
+
+            <p id="authMessage"></p>
+            <button type="button" id="logoutBtn" hidden>Logout</button>
+        </section>
+
+        <section class="request-section">
+            <h2>Create a Help Request</h2>
+
+            <form id="helpForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="text" id="title" placeholder="What help do you need?" required>
+                <textarea id="description" placeholder="Describe your request" required></textarea>
+                <button type="submit">Post Request</button>
+            </form>
+        </section>
+
+        <section class="requests">
+            <h2>Community Help Requests</h2>
+            <div id="requestList">
+                <p>Please login to view requests.</p>
+            </div>
+        </section>
+
+        <!-- CHAT SECTION -->
+        <section class="request-section" id="chatSection" hidden>
+            <h2 id="chatTitle">LifeLink Chat</h2>
+
+            <div id="chatMessages">
+                <p>Start your conversation!</p>
+            </div>
+
+            <form id="chatForm">
+                <input
+                    type="text"
+                    id="chatInput"
+                    placeholder="Type your message..."
+                    required
+                >
+                <button type="submit" id="sendChatBtn">Send</button>
+            </form>
+
+            <button type="button" id="closeChatBtn">Close Chat</button>
+        </section>
+
+    </main>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
